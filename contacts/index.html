@@ -5,33 +5,10 @@
 
 <h1>Contacts</h1>
 <div>
-	eMail: ivan.poluianov@gmail.com
+	eMail: ipoluyanov@gmail.com
 </div>
 <div>
 	facebook: <a target="_blank" href="https://www.facebook.com/ipoluianov">facebook.com/ipoluianov</a>
-</div>
-
-<script>
-function copyToClipboard(elementId) {
-// Create a "hidden" input
-var aux = document.createElement("input");
-// Assign it the value of the specified element
-aux.setAttribute("value", document.getElementById(elementId).innerHTML);
-// Append it to the body
-document.body.appendChild(aux);
-// Highlight its content
-aux.select();
-// Copy the highlighted text
-document.execCommand("copy");
-// Remove it from the body
-document.body.removeChild(aux);
-}
-</script>
-
-<h2>Support me</h2>
-<div>
-	ETH:<pre id="eth_addr">0x60087f17b9dAF691DEd6c40Cb1fA6CE4407fa58C</pre>
-	<button onclick="copyToClipboard('eth_addr')">Copy Address</button>
 </div>
 
 {#bottom.html#}
