@@ -1,0 +1,48 @@
+{#header.html#}
+
+{%title=Poluianov%}
+{%description=Personal%}
+
+<h1>GoLang GC description</h1>
+<div>
+<h2>Introduction</h2>
+
+Go, also known as Golang, was developed at Google as a programming language aimed at efficient operation and rapid development. One of the key features of Go is its garbage collection (GC) system, which automatically frees up memory used by unnecessary objects. This is crucial for preventing memory leaks and ensuring efficient resource management.
+
+<div>
+	<img src="golang-gc.png"/>
+</div>
+
+<h2>Basics of Garbage Collection in Go</h2>
+
+Garbage collection in Go is based on the concept of reachability. An object is considered "alive" if it is reachable, meaning there is at least one reference to it from another live object or from the root set (which includes global variables and goroutine stacks). Everything that is unreachable is considered "garbage" and is eligible for removal.
+
+<h2>Garbage Collection Algorithm</h2>
+
+Go uses the "Tri-color Mark-and-Sweep" algorithm. In this algorithm, three colors are used to mark objects:
+1. White: objects that have not yet been reached.
+2. Gray: objects that have been reached but their child objects have not yet been processed.
+3. Black: objects that have been reached and all their child objects have been processed.
+
+The process begins by marking all objects as white. Then, the root set is marked as gray, and the "coloring" process starts. Each gray object is examined, its child objects are marked gray, and it itself becomes black. This process continues until there are no gray objects left. Anything that remains white is considered garbage and is removed.
+
+<h2>Garbage Collection Pauses</h2>
+
+Early versions of Go suffered from lengthy GC pauses, which could negatively impact performance, especially in real-time systems. However, significant improvements have been made in subsequent versions. Go aims to keep GC pauses short, usually no more than a few milliseconds.
+
+<h2>Concurrent Garbage Collection</h2>
+
+Garbage collection in Go is largely concurrent. This means that most of the garbage collection work is done in parallel with the program's execution. This reduces the impact of garbage collection on the program's performance.
+
+<h2>Garbage Collection Tuning</h2>
+
+Developers can control the behavior of the garbage collector through environment variables and runtime parameters. For example, the `GOGC` variable can be used to control the frequency of garbage collection. Increasing this value will reduce the frequency of collections, which can improve performance but increase memory usage.
+
+<h2>Conclusion</h2>
+
+Garbage collection in Go is a complex but efficiently implemented component of the language, providing automatic memory management. The combination of concurrency, an effective algorithm, and the ability to tune makes Go's garbage collection a powerful tool for modern software development.
+
+</div>
+
+{#bottom.html#}
+
