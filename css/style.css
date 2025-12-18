@@ -1411,6 +1411,59 @@ a.link_in_text {
     filter: brightness(1.2);
 }
 
+.notes_links {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link_card {
+    padding: 40px;
+    background-color: #272727;
+    border-radius: 12px;
+    border: 1px solid #333333;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.link_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    border-color: #8B5CF6;
+    background: linear-gradient(135deg, #272727 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.link_card h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.link_description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #CCCCCC;
+}
+
+.link_url {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link_url:hover {
+    transform: translateX(4px);
+    filter: brightness(1.2);
+}
+
 .about {
     padding: 60px 20px;
     background-color: #1a1a1a;
@@ -1500,6 +1553,10 @@ a.link_in_text {
     }
     
     .project_card {
+        padding: 30px 20px;
+    }
+    
+    .link_card {
         padding: 30px 20px;
     }
 }
