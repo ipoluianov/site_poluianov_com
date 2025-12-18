@@ -637,6 +637,34 @@ a.link_in_text {
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
 }
 
+.header_nav_link.active {
+    color: #FFFFFF;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(34, 120, 181, 0.25) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.header_nav_link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B5CF6, transparent);
+    animation: activeGlow 2s ease-in-out infinite;
+}
+
+@keyframes activeGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 .header_nav_link:active {
     background-color: rgba(255, 255, 255, 0.1);
 }

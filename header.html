@@ -76,6 +76,26 @@
     </div>
 </header>
 
+<script>
+(function() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.header_nav_link');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        
+        // Для главной страницы проверяем точное совпадение
+        if (linkPath === '/' && currentPath === '/') {
+            link.classList.add('active');
+        }
+        // Для других страниц проверяем, начинается ли текущий путь с пути ссылки
+        else if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
+            link.classList.add('active');
+        }
+    });
+})();
+</script>
+
 <main>
     <section class="main_content">
         <div class="wrapper">
