@@ -1692,3 +1692,199 @@ a.link_in_text {
     }
 }
 
+/* Resume Styles */
+.resume_section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume_section h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.resume_timeline {
+    position: relative;
+    padding-left: 0;
+}
+
+.resume_timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #8B5CF6 0%, #2278B5 100%);
+    opacity: 0.3;
+}
+
+.resume_item {
+    position: relative;
+    padding: 30px 30px 30px 70px;
+    margin-bottom: 40px;
+    background-color: #272727;
+    border-radius: 12px;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+}
+
+.resume_item::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 40px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.3);
+}
+
+.resume_item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.2);
+    border-color: #8B5CF6;
+    background: linear-gradient(135deg, #272727 0%, rgba(139, 92, 246, 0.05) 100%);
+}
+
+.resume_item_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.resume_item_title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #FFFFFF;
+}
+
+.resume_item_title h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #8B5CF6;
+}
+
+.resume_item_meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    text-align: right;
+}
+
+.resume_date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #CCCCCC;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(34, 120, 181, 0.15) 100%);
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.resume_location {
+    font-size: 13px;
+    color: #888888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.resume_location::before {
+    content: '📍';
+    font-size: 12px;
+}
+
+.resume_description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+}
+
+.resume_responsibilities {
+    margin-top: 20px;
+}
+
+.resume_responsibilities h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.resume_responsibilities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume_responsibilities li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #CCCCCC;
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.resume_responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #8B5CF6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .resume_timeline::before {
+        left: 15px;
+    }
+    
+    .resume_item {
+        padding: 25px 20px 25px 50px;
+    }
+    
+    .resume_item::before {
+        left: 7px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .resume_item_header {
+        flex-direction: column;
+    }
+    
+    .resume_item_meta {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .resume_section h1 {
+        font-size: 32px;
+    }
+    
+    .resume_item_title h2 {
+        font-size: 20px;
+    }
+    
+    .resume_item_title h3 {
+        font-size: 16px;
+    }
+}
+
