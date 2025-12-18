@@ -441,6 +441,153 @@ a.link_in_text {
     margin: 0 auto;
 }
 
+.main_content {
+    min-height: calc(100vh - 200px);
+}
+
+.main_content .wrapper {
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Modern Header Styles */
+.site_header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(23, 23, 23, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header_container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 30px;
+}
+
+.header_logo_link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.header_logo_link:hover {
+    opacity: 0.8;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.header_logo_link:hover .header_avatar {
+    border-color: #2278B5;
+}
+
+.header_logo_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header_logo_name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.header_nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header_nav_list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_nav_item {
+    margin: 0;
+}
+
+.header_nav_link {
+    display: block;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #CCCCCC;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.header_nav_link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.header_nav_link:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header_social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header_social_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: #CCCCCC;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.header_social_link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.header_social_link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Legacy header styles for backward compatibility */
 .header {
     margin-top: 10px;
     width: 100%;
@@ -451,40 +598,6 @@ a.link_in_text {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-}
-
-.header_logo {
-    display: flex;
-}
-
-.header_logo_text {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10pt;
-}
-
-.header_logo_text_first {
-    font-size: 24px;
-    font-weight: 500;
-}
-
-.header_logo_text_second {
-    font-size: 16px;
-}
-
-.header_list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.header_item {
-    margin-right: 50px;
-}
-
-.header_item:last-child {
-    margin-right: 0;
 }
 
 .header_link {
@@ -1100,6 +1213,31 @@ a.link_in_text {
 }
 
 @media (max-width: 768px) {
+    .header_content {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .header_nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .header_nav_list {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .header_nav_link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .header_social {
+        margin-left: auto;
+    }
+    
     .hero_title {
         font-size: 36px;
     }
@@ -1127,6 +1265,26 @@ a.link_in_text {
     
     .project_card {
         padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_logo_name {
+        font-size: 18px;
+    }
+    
+    .header_avatar {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .header_nav_list {
+        gap: 2px;
+    }
+    
+    .header_nav_link {
+        padding: 6px 10px;
+        font-size: 13px;
     }
 }
 
