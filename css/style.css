@@ -854,46 +854,97 @@ a.link_in_text {
     opacity: .75;
 }
 
+.bottom {
+    margin-top: 60px;
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #1a0f26 100%);
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.bottom .wrapper {
+    background-color: transparent;
+}
+
+.bottom .dark_block {
+    background-color: transparent;
+    padding: 0;
+}
+
 .bottom_columns {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .bottom_list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
 }
 
 .bottom_item {
-    margin-right: 25px;
-}
-
-.bottom_item:last-child {
-    margin-right: 0;
+    margin: 0;
 }
 
 .bottom_item_copyright {
-    font-size: 12px;
-    color: #777777;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
     text-align: right;
 }
 
-.bottom_link {
+.copyright_text {
     font-size: 14px;
-    color: #999999;
+    color: #888888;
+    font-weight: 300;
+}
+
+.copyright_name {
+    font-size: 15px;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+}
+
+.bottom_link {
+    font-size: 15px;
+    color: #CCCCCC;
     text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+.bottom_link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8B5CF6 0%, #2278B5 100%);
+    transition: width 0.3s ease;
 }
 
 .bottom_link:hover, .bottom_link:focus, .bottom_link:active {
-    opacity: .75;
+    color: #FFFFFF;
+}
+
+.bottom_link:hover::after {
+    width: 100%;
 }
 
 .gazer_content_table {
@@ -1682,6 +1733,22 @@ a.link_in_text {
     
     .contact_card {
         padding: 30px 20px;
+    }
+    
+    .bottom_columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .bottom_list {
+        justify-content: center;
+    }
+    
+    .bottom_item_copyright {
+        align-items: center;
+        text-align: center;
     }
 }
 
