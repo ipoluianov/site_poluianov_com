@@ -1491,6 +1491,94 @@ a.link_in_text {
     font-weight: 600;
 }
 
+.contacts_section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacts_section h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacts_subtitle {
+    font-size: 20px;
+    color: #CCCCCC;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.contacts_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact_card {
+    padding: 40px 30px;
+    background-color: #272727;
+    border-radius: 12px;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.contact_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(139, 92, 246, 0.3);
+    border-color: #8B5CF6;
+    background: linear-gradient(135deg, #272727 0%, rgba(139, 92, 246, 0.08) 100%);
+}
+
+.contact_icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(34, 120, 181, 0.2) 100%);
+    border-radius: 50%;
+    color: #8B5CF6;
+    transition: all 0.3s ease;
+}
+
+.contact_card:hover .contact_icon {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(34, 120, 181, 0.3) 100%);
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+.contact_card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.contact_link {
+    display: inline-block;
+    font-size: 16px;
+    color: #CCCCCC;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+.contact_link:hover {
+    color: #8B5CF6;
+    transform: translateX(4px);
+}
+
 @media (max-width: 768px) {
     .header_content {
         flex-wrap: wrap;
@@ -1557,6 +1645,23 @@ a.link_in_text {
     }
     
     .link_card {
+        padding: 30px 20px;
+    }
+    
+    .contacts_section h1 {
+        font-size: 36px;
+    }
+    
+    .contacts_subtitle {
+        font-size: 18px;
+    }
+    
+    .contacts_grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact_card {
         padding: 30px 20px;
     }
 }
