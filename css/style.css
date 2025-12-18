@@ -1481,10 +1481,26 @@ a.link_in_text {
     filter: brightness(1.2);
 }
 
-.notes_links {
+.notes_section {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.notes_section h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #8B5CF6 0%, #2278B5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.notes_links {
+    margin-top: 40px;
 }
 
 .link_card {
@@ -1724,6 +1740,10 @@ a.link_in_text {
     
     .contacts_subtitle {
         font-size: 18px;
+    }
+    
+    .notes_section h1 {
+        font-size: 36px;
     }
     
     .contacts_grid {
