@@ -1033,6 +1033,8 @@ a.link_in_text {
     font-size: 32px;
     margin-bottom: 20px;
     color: #EEEEEE;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .hero_title {
@@ -1041,6 +1043,8 @@ a.link_in_text {
     line-height: 1.2;
     margin-bottom: 20px;
     color: #FFFFFF;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
 }
 
 .hero_title strong {
@@ -1057,6 +1061,8 @@ a.link_in_text {
     line-height: 1.6;
     margin-bottom: 40px;
     color: #CCCCCC;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
 }
 
 .hero_subtitle strong {
@@ -1069,6 +1075,19 @@ a.link_in_text {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn {
