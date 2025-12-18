@@ -507,14 +507,31 @@ a.link_in_text {
 
 .header_logo_text {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header_logo_prefix {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2278B5;
+    user-select: none;
 }
 
 .header_logo_name {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     color: #FFFFFF;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header_logo_suffix {
+    font-size: 18px;
+    font-weight: 400;
+    color: #888888;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .header_nav {
@@ -1269,8 +1286,10 @@ a.link_in_text {
 }
 
 @media (max-width: 480px) {
-    .header_logo_name {
-        font-size: 18px;
+    .header_logo_prefix,
+    .header_logo_name,
+    .header_logo_suffix {
+        font-size: 16px;
     }
     
     .header_avatar {
@@ -1285,6 +1304,10 @@ a.link_in_text {
     .header_nav_link {
         padding: 6px 10px;
         font-size: 13px;
+    }
+    
+    .header_logo_text {
+        gap: 2px;
     }
 }
 
