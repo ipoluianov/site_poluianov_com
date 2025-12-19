@@ -1639,7 +1639,14 @@ a.link_in_text {
     text-align: center;
 }
 
-.contact_card:hover {
+.contact_card_link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.contact_card_link:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 32px rgba(139, 92, 246, 0.3);
     border-color: #8B5CF6;
@@ -1681,9 +1688,8 @@ a.link_in_text {
     word-break: break-word;
 }
 
-.contact_link:hover {
+.contact_card_link:hover .contact_link {
     color: #8B5CF6;
-    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
