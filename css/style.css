@@ -1222,6 +1222,11 @@ a.link_in_text {
     gap: 12px;
 }
 
+.tech_list_tertiary {
+    margin-top: 20px;
+    gap: 12px;
+}
+
 .tech_item {
     padding: 12px 24px;
     background-color: #272727;
@@ -1247,6 +1252,22 @@ a.link_in_text {
     border-color: #8B5CF6;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+.tech_item_secondary_2 {
+    padding: 13px 26px;
+    font-size: 17px;
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(34, 120, 181, 0.15) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #FFFFFF;
+}
+
+.tech_item_secondary_2:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(34, 120, 181, 0.25) 100%);
+    border-color: #8B5CF6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
 }
 
 .tech_item_secondary {
@@ -1711,6 +1732,11 @@ a.link_in_text {
     .tech_item_main {
         padding: 14px 24px;
         font-size: 18px;
+    }
+    
+    .tech_item_secondary_2 {
+        padding: 11px 22px;
+        font-size: 15px;
     }
     
     .tech_item_secondary {
