@@ -1527,11 +1527,35 @@ a.link_in_text {
 }
 
 .soft_catalog .link_card {
+    position: relative;
     max-width: 300px;
     width: 100%;
     padding: 18px 16px;
     margin-bottom: 0;
     box-sizing: border-box;
+}
+
+/* Full-card click target; secondary links use .link_card_sub above this layer */
+.soft_catalog .link_card_primary {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.soft_catalog .link_card_primary:focus {
+    outline: none;
+}
+
+.soft_catalog .link_card_primary:focus-visible {
+    outline: 2px solid #8B5CF6;
+    outline-offset: 2px;
+}
+
+.soft_catalog .link_card_sub {
+    position: relative;
+    z-index: 2;
 }
 
 .soft_catalog .link_card h3 {
