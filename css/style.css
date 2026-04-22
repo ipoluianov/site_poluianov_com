@@ -1535,7 +1535,7 @@ a.link_in_text {
     box-sizing: border-box;
 }
 
-/* Full-card click target; secondary links use .link_card_sub above this layer */
+/* Full-card click target */
 .soft_catalog .link_card_primary {
     position: absolute;
     inset: 0;
@@ -1551,11 +1551,6 @@ a.link_in_text {
 .soft_catalog .link_card_primary:focus-visible {
     outline: 2px solid #8B5CF6;
     outline-offset: 2px;
-}
-
-.soft_catalog .link_card_sub {
-    position: relative;
-    z-index: 2;
 }
 
 .soft_catalog .link_card h3 {
