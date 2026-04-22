@@ -1518,6 +1518,42 @@ a.link_in_text {
     margin-top: 40px;
 }
 
+/* Software catalog: compact grid, multiple columns on wide viewports */
+.soft_catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 300px));
+    gap: 14px 16px;
+    justify-content: start;
+}
+
+.soft_catalog .link_card {
+    max-width: 300px;
+    width: 100%;
+    padding: 18px 16px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.soft_catalog .link_card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.soft_catalog .link_description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.soft_catalog .link_card > p {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.soft_catalog .link_card > p:last-child {
+    margin-bottom: 0;
+}
+
 .link_card {
     padding: 40px;
     background-color: #272727;
@@ -1756,6 +1792,15 @@ a.link_in_text {
     
     .link_card {
         padding: 30px 20px;
+    }
+
+    .soft_catalog {
+        grid-template-columns: 1fr;
+    }
+
+    .soft_catalog .link_card {
+        max-width: none;
+        padding: 18px 16px;
     }
     
     .contacts_section h1 {
